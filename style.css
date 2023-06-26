@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&family=League+Spartan:wght@500&family=Open+Sans&family=Poppins:wght@300&family=Satisfy&display=swap');
+@font-face {
+  font-family: 'CustomFont';
+  src: url('fonts/CustomFont.ttf') format('truetype');
+}
+
+h1{
+  font-size: 85px;
+  font-family: 'League Spartan', sans-serif;
+  margin: 10px;
+  padding: 7px;
+}
+p{
+  font-family:"CustomFont" ,sans-serif ;
+  font-size: 21px;
+  font-weight: 100;
+}
+.input-container {
+    position: relative;
+  }
+
+  
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+.icon2 {
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  transform: translateY(-50%);
+}
+
+input[type="text"] {
+  padding-left: 30px; /* Adjust the value based on the icon size */
+  /* padding: 8px; */
+  padding: 10px 30px;
+  padding-right: 0px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.home{
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+}
+
+.foot{
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 45px;
+}
+.foot a{
+  text-decoration: none;
+  color: black;
+  transition-duration: 0.4s;
+  
+}
+.foot p{
+  margin: 0;
+}
+.foot p:hover{
+  border-bottom: 2px solid black;
+}
+
+
+
+.home h1{
+  border-bottom: 5px solid black;
+}
+.home p{
+  text-align: center;
+}
+.home button{
+  top: 2px;
+}
+button{
+  position: relative;
+  height: 32px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  font-size: 21px;
+  border: none;
+  background-image: linear-gradient( to right, rgb(255, 145, 0) , rgb(207, 23, 137),rgb(70, 4, 70));
+}
+
+.head a{
+  color: black;
+  text-decoration: none;
+  font-size:30px ;
+  font-family: 'League Spartan', sans-serif;
+  
+}
+.head{
+  padding-left: 45px;
+
+}
+
+.why-content{
+  max-width: 650px;
+  justify-content: space-around;
+}
+
+.why-content div{
+  display: flex;
+  flex-direction: row;
+}
+.why-content div *{
+  margin: 8px;
+}
+.why h1,.code h1{
+  display: inline;
+  border-bottom: 5px solid black;
+}
+.head{
+  flex-grow: 1;
+}
+.why{
+    height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.why1,.why-content{
+  margin: 20px;
+
+}
+.why1{
+  justify-content: flex-start;
+}
+.code{
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.code p{
+  text-align: center;
+}
+
+@media (max-width:650px) {
+  .head{
+    padding-left: 25px;
+  
+  }
+  .why{
+    height: auto;
+  }
+  h1{
+    font-size: 50px;
+    text-align: center;
+  }
+}
