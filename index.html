@@ -16,80 +16,42 @@
                 alert("Search box is empty");
             }
             else{
-                var elem = document.getElementById(value);
-                elem.scrollIntoView();
+                window.location.href = `${value}.html`;
             }
-            
-}
+        
+    }
+    
+    document.addEventListener("DOMContentLoaded",function(){ 
+        var input = document.getElementById("search");
+        var button = document.getElementById("clear");
+        button.onclick   = function(){
+            document.getElementById("search").value = "";
+        }
+    })
+    
+    
+    
 </script>
+
 <body>
 
     <div class="home" id="#home">
         <h1>Wec.ai</h1>
-        <p>Unleash AI's potential for SMEs: <br>A <strong>non profit community</strong> for ideation and informed choices </p>
+        <p>Unleash AI's potential for SMEs: <br>A <span class="bold">non profit community</span> for ideation and informed choices </p>
         <div class="input-container">
             <i class="icon fa-solid fa-search"></i>
             <input type="text" name="search" id="search" placeholder="Enter the password" >
-            <i class="icon2 fa-solid fa-xmark"></i>
-            <button onclick="nav()">Go</button>
+            <i class="icon2 fa-solid fa-xmark"><button id="clear" onclick="clear()" type="button"></button></i>
+            <button onclick="nav()" type="submit" id="go">Go</button>
         </div>
         
     </div>
     <div class="foot">
-        <a href="#page1"><p>Why ?  <i class="fa-solid fa-chevron-right"></i><i class="fa-solid fa-chevron-right"></i></p></a>
+        <a href="why.html"><p>Why ? <i class="fa-solid fa-chevron-right"></i></p></a>
     </div>
-    <div id="page1"></div>
-    <div class="page1">
-        <div class="head">
-            <a href="#home"><h3>Wec.ai</h3></a>
-        </div>
-        <div id="why" class="why">
+    
 
-            
-            <h1>Why?</h1>
-            
-
-            <div class="why-content">
-
-                <div>
-                    <p><strong>01</strong></p> 
-                    <p>With 87% of family-run or SMEs struggling sustain, our aim is to provide accessible AI guidance for businesses , ensuring long-term viability and succes..</p>
-                </div>
-                <br>
-                <div>
-                    <p><strong>02</strong></p> 
-                    <p>To provide a chance for young , ambitious talents primary girls from underprivilleged families to set them on a path towards furture advancement.</p>
-                </div>
-                <br>
-                <div>
-                    <p><strong>03</strong></p>  
-                    <p>Empowering aspiring AI talents, platform fosters equity by liberating them from constraining knowledge environments at work and propelling them to towards their entrepreneurial aspirations. </p>
-                </div>
-
-            </div>
-        </div>
-        <div id="code"></div>
-        <div class="page2">
-            <div class="head">
-                <a href="#home"><h3>Wec.ai</h3></a>
-            </div>
-            <div id="code" class="code">
-                <h1>We code ai</h1>
-                <p>Passionate about programming and AI?<br>Join out community to help small business. Submit your best demo sample!</p>     
-                <button>Submit</button>           
-            </div>
-        </div>
-
-        <div class="page3" id="compare">
-            <div class="head">
-                <a href="#home"><h3>Wec.ai</h3></a>
-            </div>
-            <div class="code">
-                <h1>We compare ai</h1>
-                <p>Join us: if you're an AI expert with consulting or hands-on experience,<br> driven by passion and empathy to support small and medium businesses.</p>     
-                <button>Join</button>           
-            </div>
-        </div>
+        
     
    
     
