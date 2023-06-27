@@ -10,6 +10,8 @@
 <script>
     function nav() {
             var value = document.getElementById("search").value;
+            value = value.toLowerCase();
+            value = value.trim();
             if(value == ""){
                 alert("Search box is empty");
             }
@@ -24,7 +26,7 @@
 
     <div class="home" id="#home">
         <h1>Wec.ai</h1>
-        <p>Unleash AI's potential for SMEs: <br>A <strong>non profit community</strong> for ideation and informed choices gg</p>
+        <p>Unleash AI's potential for SMEs: <br>A <strong>non profit community</strong> for ideation and informed choices </p>
         <div class="input-container">
             <i class="icon fa-solid fa-search"></i>
             <input type="text" name="search" id="search" placeholder="Enter the password" >
@@ -36,8 +38,8 @@
     <div class="foot">
         <a href="#page1"><p>Why ?  <i class="fa-solid fa-chevron-right"></i><i class="fa-solid fa-chevron-right"></i></p></a>
     </div>
-
-    <div class="page1" id="page1">
+    <div id="page1"></div>
+    <div class="page1">
         <div class="head">
             <a href="#home"><h3>Wec.ai</h3></a>
         </div>
@@ -66,8 +68,8 @@
 
             </div>
         </div>
-
-        <div class="page2" id="code">
+        <div id="code"></div>
+        <div class="page2">
             <div class="head">
                 <a href="#home"><h3>Wec.ai</h3></a>
             </div>
