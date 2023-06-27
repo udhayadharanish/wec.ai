@@ -160,8 +160,13 @@ button{
 
 @media (max-width:768px) {
   .head{
-    padding-left: 25px;
-  
+    margin: 0 0 0 5%;
+  }
+  .head a{
+    
+    font-size:27px ;
+   
+    
   }
   .why{
     height: auto;
