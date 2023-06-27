@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&family=League+Spartan:wght@500&family=Open+Sans&family=Poppins:wght@300&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&family=League+Spartan:wght@800&family=Open+Sans&family=Poppins:wght@300&family=Satisfy&display=swap');
 @font-face {
   font-family: 'CustomFont';
-  src: url('fonts/CustomFont.ttf') format('truetype');
+  src: url('fonts/OpenSauceSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'BoldFont';
+  src: url('fonts/OpenSauceSans-SemiBold.ttf') format('truetype');
 }
 
-
+.bold{
+  font-family: "BoldFont",sans-serif;
+}
 
 h1{
   font-size: 85px;
@@ -20,7 +26,9 @@ p{
 }
 .input-container {
     position: relative;
+
   }
+
 
   
 .icon {
@@ -40,9 +48,12 @@ input[type="text"] {
   padding-left: 30px; /* Adjust the value based on the icon size */
   /* padding: 8px; */
   padding: 10px 30px;
+  font-size: 20px;
   padding-right: 0px;
   border-radius: 5px;
+  height: 30px;
   border: 1px solid black;
+  width: 350px;
 }
 
 .home{
@@ -58,7 +69,7 @@ input[type="text"] {
   height: 10vh;
   display: flex;
   justify-content: flex-end;
-  padding-right: 45px;
+  padding-right: 55px;
 }
 .foot a{
   text-decoration: none;
@@ -76,7 +87,6 @@ input[type="text"] {
 
 
 .home h1,.code h1{
-  border-bottom: 5px solid black;
   margin: 15px 0;
 }
 .home p{
@@ -84,18 +94,16 @@ input[type="text"] {
   margin: 40px 0;
 
 }
-.home button{
-  top: 2px;
-}
+
 button{
   position: relative;
-  height: 32px;
+  height: 50px;
   width: 100px;
   border-radius: 10px;
   color: white;
   font-size: 21px;
   border: none;
-  background-image: linear-gradient( to right, rgb(255, 145, 0) , rgb(207, 23, 137),rgb(70, 4, 70));
+  background-image: linear-gradient( to right, rgb(255, 145, 0) , rgb(207, 23, 137),rgb(122, 9, 122));
 }
 
 .head a{
@@ -109,7 +117,7 @@ button{
 
   flex-grow: 1;
   height: 10vh;
-  margin: 0 0 0 75px;
+  margin: 0 0 0 5%;
 
 }
 
@@ -128,11 +136,10 @@ button{
 }
 .why h1,.code h1{
   display: inline;
-  border-bottom: 5px solid black;
 }
 
 .why{
-    height: 85vh;
+    height: 90vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -168,8 +175,16 @@ button{
    
     
   }
+  
+  
+  
+  input[type="text"]{
+    width: 200px;
+    
+  }
   .why{
     height: auto;
+    margin-top: 15%;
   }
   h1{
     font-size: 50px;
@@ -201,19 +216,19 @@ button{
     flex-grow: 1;
   }
   input[type="text"]{
-    font-size: 20px;
-    height: 40px;
-    width: 200px;
+    font-size: 25px;
+    height: 50px;
+    width: 400px;
     padding: 0 50px;
-    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
   }
   button{
-    height: 40px;
+    height: 50px;
     padding: 10px;
   }
-  .home button{
-    top :0px;
-  }
+  
+  
   
 }
 @media (height:1024px) {
@@ -221,4 +236,64 @@ button{
     flex-direction: column;
   }
   
+}
+
+h1 {
+  padding: 30px 0 40px;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  height: 10px;
+  /* transform: skew(-12deg) translateX(-50%); */
+  background: rgb(0, 0, 0);
+  z-index: -1;
+}
+.home h1::before{
+  left: 35%;
+  width: 70px;
+}
+.page1 h1::before{
+  left: 0;
+  width: 100px;
+}
+.code h1::before{
+  left: 42%;
+  width: 80px;
+}
+.loader{
+  height: 100vh;
+  background-color: aliceblue;
+  position: absolute;
+}
+.head{
+  flex-basis: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.page1 .foot{
+  height: 5vh;
+  flex-basis: 100%;
+  
+}
+#clear{
+  background-image: none;
+  background-color: transparent;
+  position: absolute;
+  bottom: 10px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 30px;
+  /* background-color: red; */
+  height: 30px;
+}
+.icon,.icon2{
+  margin: 0 10px;
+  font-size: 24px;
 }
