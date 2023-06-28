@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&family=League+Spartan:wght@800&family=Open+Sans&family=Poppins:wght@300&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&family=League+Spartan:wght@700&family=Open+Sans&family=Poppins:wght@300&family=Satisfy&display=swap');
 @font-face {
   font-family: 'CustomFont';
-  src: url('fonts/OpenSauceSans-Regular.ttf') format('truetype');
+  src: url('fonts/OpenSauceSans-Light.ttf') format('truetype');
 }
 @font-face {
   font-family: 'BoldFont';
@@ -55,7 +55,7 @@ p{
   font-size: 20px;
   padding-right: 0px;
   border-radius: 5px;
-  height: 30px;
+  height: 15px;
   border: 1px solid black;
   width: 350px;
 }
@@ -91,23 +91,24 @@ p{
 
 
 .home h1,.code h1{
-  margin: 15px 0;
+  margin: 5px 0;
 }
 .home p{
   text-align: center;
-  margin: 40px 0;
+  margin: 30px 0;
 
 }
 
 button{
   position: relative;
-  height: 50px;
+  height: 37px;
+  cursor: pointer;
   width: 100px;
   border-radius: 10px;
   color: white;
   font-size: 21px;
   border: none;
-  background-image: linear-gradient( to right, rgb(255, 145, 0) , rgb(207, 23, 137),rgb(122, 9, 122));
+  background-image: linear-gradient( to right, rgb(255, 145, 0) , rgb(219, 51, 155),rgb(122, 9, 122));
 }
 
 .head a{
@@ -130,10 +131,17 @@ button{
   justify-content: space-around;
   margin: 0;
 }
+.bolder{
+  font-family: 'League Spartan', sans-serif;
+  font-size:25px;
+
+}
 
 .why-content div{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: start;
 }
 .why-content div *{
   margin: 8px;
@@ -187,7 +195,7 @@ h1::before {
 }
 .home h1::before{
   left: 35%;
-  width: 70px;
+  width: 80px;
 }
 .page1 h1::before{
   left: 0;
@@ -273,18 +281,13 @@ h1::before {
 .form-row div{
   margin: 20px 30px;
 }
-.gender{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.gender div{
-  margin: 20px;
-}
+
+
+
+
 .resume div {
   display: flex;
-  margin: 20px 0;
+  margin: 0 0;
   justify-content: center;
   align-items: center;
 }
@@ -295,7 +298,7 @@ h1::before {
   overflow: hidden;
   position: absolute;
   z-index: 1;
-  transform: translateX(70%);
+  left: 65%;
 }
 .file-input__input::file-selector-button{
   display: none;
@@ -344,10 +347,12 @@ input[type=number] {
 }
 .submit-btn button{
   cursor: pointer;
-  margin: 10px;
+  margin-top: 25px;
   width: 80%;
-  height: 40px;
+  height: 35px;
+  background-image: linear-gradient(to right,#43cea2,#418cd8);
   transition-duration:0.4s;
+  
 
 }
 .submit-btn button:hover{
@@ -373,10 +378,16 @@ input[type=number] {
     height: auto;
 
   }
-  
-  
+  .input-container{
+    display: flex;
+    flex-wrap:nowrap;
+    margin:0 auto;
+
+  }
   .input-container input[type="text"]{
-    width: 200px;
+    width: 180px;
+    padding: 10px 35px;
+    margin-right:3px ;
     
   }
   .why{
@@ -461,3 +472,133 @@ input[type=number] {
   }
   
 }
+.icon3{
+  font-weight: 900;
+}
+.code button{
+  width: 130px;
+}
+.form-container{
+  position: absolute;
+  top :0;
+  align-self: center;
+  background-image: none;
+  margin: 0 auto;
+  background-color: #4245a8;
+}
+#join:hover .form-container{
+  display: block;
+}
+
+/* Should delete form-container things id this workout */
+.new-form{
+  position: absolute;
+  /* background-image: linear-gradient(to right , rgb(89, 161, 194),rgb(89, 161, 194),rgb(193, 88, 197)); */
+  color: black;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  border-radius: 10px;
+
+}
+.new-form{
+  box-shadow: 0 0 5px rgb(72, 69, 226),0 0 8px rgb(24, 105, 151) ;
+}
+.new-form input[type="text"],.new-form input[type="number"],.new-form input[type="email"],.country{
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 15px;
+  width: 200px;
+
+}
+.country-container{
+  display: flex;
+  justify-content: space-around;
+}
+.country{
+  width: 230px;
+  height: 48px;
+}
+.country option{
+  padding: 10px;
+}
+
+.new-form .drop{
+  width: 30px;
+}
+.new-form .row-input{
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+
+}
+.row-input div{
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.gender{
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.gender div{
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+.resume{
+  display: flex;
+  flex-direction: column;
+}
+.container-form{
+  display: none;
+}
+.close{
+  align-self: center;
+  background-image: none;
+  background-color: transparent;
+}
+.close img{
+  height: 30px;
+  margin: 0;
+}
+@media (max-width:738px) {
+  .new-form{
+    grid-template-columns: auto;
+    height: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    overflow-x: hidden;
+  }
+  .row-input div{
+    flex-direction: column;
+    margin: 10px 20px;
+  }
+  .new-form h4{
+    font-size: 15px;
+    font-weight: 300;
+    margin: 3px ;
+  }
+  .gender div{
+    flex-direction: row;
+  }
+  .file-input__input {
+
+    left: 70%;
+  }
+  .new-form .row-input{
+    flex-wrap: wrap;
+  }
+}
+
