@@ -18,12 +18,36 @@
 </style>
 
 <script>
+    var filestatus = "invaild";
+    document.addEventListener("DOMContentLoaded",function(){
+        let fileInput = document.getElementById("file-input");
+        fileInput.addEventListener("change", function () {  
+        if (fileInput.files.length > 0) {
+            const fileSize = fileInput.files.item(0).size;
+            const fileMb = fileSize / 1024 ** 2;
+            if(fileMb > 1){
+                document.getElementById("filesize").innerHTML = "file size limit is upto 1 MB";
+                filestatus = "Invalid";
+                
+            }
+            else{
+                document.getElementById("filesize").innerHTML = "";
+                filestatus = "valid";
+            }
+        }
+        });
+    })
     function formDisplay(){
         document.querySelector(".container-form").style.display = "block";
     }
     function formClose(){
         document.querySelector(".container-form").style.display = "none";
     }
+    document.addEventListener("change",function(event){
+        var filename = document.querySelector("#file-input");
+        document.querySelector("#filename").innerHTML= filename.files[0].name;
+    })
+
 </script>
 <style>
     .new-form .jdropdown{
@@ -62,7 +86,7 @@
             <div class="row-input">
                 <div class="country-container">
                   <h4>Country</h4>
-                  <select name="country" id="" class="country ">
+                  <select name="country" id="" class="country " >
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -292,8 +316,8 @@
                     <option value="Uganda">Uganda</option>
                     <option value="Ukraine">Ukraine</option>
                     <option value="United Arab Emirates">United Arab Emirates</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="United States">United States</option>
+                    <option value="United Kingdom" selected>United Kingdom</option>
+                    <option value="United States" >United States</option>
                     <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
                     <option value="Uruguay">Uruguay</option>
                     <option value="Uzbekistan">Uzbekistan</option>
@@ -311,7 +335,7 @@
                 </div>
                 <div>
                     <h4>Phone Number</h4>
-                    <input type="number" name="number" placeholder="Eg. +91 9999999999">
+                    <input type="number" name="number" placeholder="Eg. +44 9999999999">
                 </div>
                 
             </div>
@@ -321,7 +345,7 @@
                 <div class="row-input">
                   
                   <div class="gender">
-                    <h3>Gender</h3>
+                    <h4>Gender</h4>
                       <div>
                           <input type="radio" name="gender">
                           <label for="">Male</label>
@@ -342,7 +366,7 @@
                 </div>
             </div>
             <div class="resume">
-                <h3>Upload Your Resume Here</h3>
+                <h4>Upload Your Resume Here</h4>
                 <div class="file-input">
                     <input
                       type="file"
@@ -368,6 +392,13 @@
                       </svg>
                       <span>Upload file</span></label
                     >
+                    
+                  </div>
+                  <div id="filename">
+
+                  </div>
+                  <div id="filesize">
+
                   </div>
                 
             </div>
