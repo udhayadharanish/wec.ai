@@ -387,7 +387,7 @@ input[type=number] {
     margin:0 auto;
 
   }
-  .input-container input[type="text"]{
+  .input-container input[type="password"]{
     width: 180px;
     padding: 10px 35px;
     margin-right:3px ;
@@ -426,7 +426,7 @@ input[type=number] {
     max-width: 1050px;
     flex-grow: 1;
   }
-  .input-container input[type="text"]{
+  .input-container input[type="password"]{
     font-size: 25px;
     height: 50px;
     width: 400px;
